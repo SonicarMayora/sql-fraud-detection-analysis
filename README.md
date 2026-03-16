@@ -77,7 +77,7 @@ GROUP BY class;
 
 ---
 
-## Key Insights (to be completed)
+## Key Insights 
 
 1. Fraud transactions are extremely rare
 

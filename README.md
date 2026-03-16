@@ -79,8 +79,79 @@ GROUP BY class;
 
 ## Key Insights (to be completed)
 
-This section will summarize the main findings of the analysis, including patterns in transaction amounts, fraud frequency, and statistical differences between fraudulent and legitimate transactions.
+1. Fraud transactions are extremely rare
 
+The dataset contains 284,807 total transactions, of which only 492 are fraudulent.
+
+This means that fraudulent transactions represent approximately 0.17% of all transactions.
+
+This strong class imbalance is typical in financial fraud detection problems and presents challenges for analytical and machine learning models.
+
+2. Fraudulent transactions have higher average amounts
+
+The average transaction amount differs between legitimate and fraudulent transactions:
+
+Transaction Type	Average Amount
+Legitimate	~88
+Fraudulent	~122
+
+This suggests that fraudulent transactions tend to involve higher transaction values on average.
+
+However, the difference is moderate rather than extreme.
+
+3. Legitimate transactions reach much higher maximum values
+
+The maximum transaction amount observed in legitimate transactions is significantly higher:
+
+Transaction Type	Maximum Amount
+Legitimate	~25,691
+Fraudulent	~2,125
+
+This indicates that very large transactions are more common among legitimate operations.
+
+One possible explanation is that fraudsters avoid extremely large transactions because they may trigger fraud detection systems.
+
+4. Zero-amount transactions occur mainly in legitimate activity
+
+The analysis of transactions with amount = 0 shows:
+
+Transaction Type	Zero-amount Transactions
+Legitimate	1798
+Fraudulent	27
+
+This suggests that zero-value transactions are mostly associated with legitimate system processes, such as:
+
+card verification
+
+payment authorization checks
+
+internal system validations
+
+Fraudulent transactions rarely involve zero-amount operations.
+
+5. Fraud transactions appear concentrated in mid-range values
+
+Preliminary percentile analysis indicates that fraudulent transactions tend to occur in moderate transaction ranges rather than extreme values.
+
+This pattern is consistent with common fraud behavior, where attackers attempt to:
+
+avoid unusually large transactions
+
+remain within ranges that appear less suspicious
+
+Overall Interpretation
+
+The analysis suggests that fraudulent transactions in this dataset tend to:
+
+represent a very small proportion of total activity
+
+involve moderately higher transaction amounts on average
+
+avoid extremely large transactions
+
+rarely appear in zero-amount system operations
+
+These behavioral patterns are consistent with strategies used to reduce the likelihood of triggering automated fraud detection systems.
 ---
 
 ## Skills Demonstrated
